@@ -1,0 +1,33 @@
+<div class="teams-container">
+  <h3 class="page-title">Football Teams</h3>
+
+  <div class="table-wrapper">
+    <table class="teams-table">
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Founded</th>
+          <th>Team Name</th>
+          <th><i class="bi bi-star-fill text-warning"></i></th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (team of teams; track team.pic) 
+        {
+            <tr>
+            <td>
+                <img [src]="team.pic" [alt]="team.name" class="team-logo" />
+            </td>
+            <td>{{ team.foundedYear || 'N/A' }}</td>
+            <td class="fw-semibold text-capitalize">
+                {{ team.name }}
+            </td>
+            <td>
+                <i (click)="changeStar(team.name)" [class]="team.starClass"></i>
+            </td>
+            </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

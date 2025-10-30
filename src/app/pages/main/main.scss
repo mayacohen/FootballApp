@@ -1,0 +1,143 @@
+// Root container takes full width of screen
+.teams-container {
+//  width: 100vw;
+  margin: 0;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+// Page title styling
+.page-title {
+  text-align: center;
+  color: #0d6efd;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+// Wrapper to allow table scrolling on mobile
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+// Table full width
+.teams-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+
+  thead {
+    background-color: #0d6efd;
+    color: #fff;
+
+    th {
+      padding: 0.75rem;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.2s ease-in-out;
+
+      &:nth-child(even) {
+        background-color: #f3f6fa;
+      }
+
+      &:hover {
+        background-color: #e7f1ff;
+      }
+    }
+
+    td {
+      padding: 0.75rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+// Logo style
+.team-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+// Star icon hover effect
+.hover-star {
+  color: #adb5bd;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: gold;
+  }
+}
+@media (max-width: 600px) {
+  .teams-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .teams-table {
+    font-size: 0.85rem;
+
+    thead th {
+      padding: 0.5rem;
+      font-size: 0.75rem;
+    }
+
+    tbody td {
+      padding: 0.5rem;
+    }
+  }
+
+  .team-logo {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* Extra small screens (down to ~250px) */
+@media (max-width: 350px) {
+  .teams-container {
+    padding: 0.5rem;
+  }
+
+  .page-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .teams-table {
+    font-size: 0.7rem;
+    min-width: 240px;
+
+    thead th {
+      padding: 0.4rem;
+      font-size: 0.65rem;
+    }
+
+    tbody td {
+      padding: 0.4rem;
+    }
+  }
+
+  .team-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  .hover-star {
+    font-size: 0.9rem;
+  }
+}
